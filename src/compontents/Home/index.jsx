@@ -1,52 +1,43 @@
-import React, { useEffect, useState } from 'react';
-import { Row, Col, Container } from 'reactstrap';
+import React, { useEffect, useState } from "react";
+import { Row, Col, Container } from "reactstrap";
 import Header from "../Header";
 import "./Home.css";
-import { Post }from "./Post";
-import Footer from '../Footer';
+import Post from "./Post";
+
 
 function Home() {
+  document.title = "Home Page";
 
-    document.title = 'Home Page'
+  // const [post, setpost] = useState([]);
 
-    // const [post, setpost] = useState([]);
+  // useEffect(() => {
 
-    // useEffect(() => {
+  //     // IDuser()
+  //     IDpost()
+  // }, []);
 
-    //     // IDuser()
-    //     IDpost()
-    // }, []);
+  // const IDpost = async () => {
+  //     const { data } = await axios.get(`http://127.0.0.1:8000/instgram/Posts/`)
 
-    // const IDpost = async () => {
-    //     const { data } = await axios.get(`http://127.0.0.1:8000/instgram/Posts/`)
+  //     console.log(data)
+  //     setpost(data)
+  // }
 
-    //     console.log(data)
-    //     setpost(data)
-    // }
-    
-    return (
-        <>
-            <Container fluid>
-                <Row>
-                        <Header />
-                </Row>
-                <Row>
-                    <Col xs={12} >
-                    
-                        
-                   <Post />
-                   
-                   
-                    </Col>
-                </Row>
-                {/* <Row className='footer'>
-                    <Footer />
-                </Row> */}
-            </Container>
-        </>
-
-    )
+  return (
+    <>
+      <Container fluid>
+        <Row>
+          <Header />
+        </Row>
+        <Row>
+          <Col xs={12}>
+            <Post />
+          </Col>
+        </Row>
+       
+      </Container>
+    </>
+  );
 }
 
-export default Home
-
+export default Home;

@@ -20,6 +20,8 @@
     "react-bootstrap": "^2.0.3",
     "react-bootstrap-grid-component": "^0.2.5",
     "react-dom": "^17.0.2",
+    "react-facebook-login": "^4.1.1",
+    "react-follow-unfollow-modal": "^0.1.5",
     "react-router-dom": "^6.1.1",
     "react-router-hash-link": "^2.4.3",
     "react-scripts": "4.0.3",

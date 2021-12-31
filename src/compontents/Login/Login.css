@@ -11,21 +11,20 @@ body {
   /* background-color: rgb(54, 53, 53); */
 }
 
-
-#leftside{
+#leftside {
   height: 530px;
   text-align: center;
 }
-.img{
+.img {
   width: 50%;
   text-align: center;
   border: 1px solid #eee;
   margin-top: 3%;
- height: 100%;
+  height: 100%;
   display: inline-block;
 }
 
-.form_data{
+.form_data {
   width: 70%;
   text-align: center;
   background-color: #fff;
@@ -34,68 +33,65 @@ body {
   height: 380px;
 }
 
-
-.img1{
+.img1 {
   display: inline-block;
   height: 51px;
   width: 50%;
   margin: 8% 0px;
 }
 
-.form_data form input
-{
+.form_data form input {
   width: 90%;
   height: 30px;
   margin-bottom: 6%;
   padding-left: 2%;
 }
 
-.form_data form .form-btn{
+.form_data form .form-btn {
   width: 90%;
   height: 30px;
   background-color: #3897f0;
   color: #fff;
   font-weight: bold;
   border: none;
-  border-radius:5px;
+  border-radius: 5px;
   cursor: pointer;
   margin-bottom: 6%;
 }
 
-
 .form-btn a {
   color: #fff;
-    text-decoration: none;
+  text-decoration: none;
 }
 
 .has-separator {
   color: #999999;
   text-transform: uppercase;
   width: 50%;
-    display: inline-block;
-    font-weight: bold;
+  display: inline-block;
+  font-weight: bold;
 }
 
-.orclass{
-    width: 100%;
-    height: 25px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-bottom: 6%;
+.orclass {
+  width: 100%;
+  height: 25px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 6%;
 }
 
-.orclass hr{
+.orclass hr {
   width: 100%;
   margin: 0px 4%;
 }
 
-
-.facebook-login, .password-reset{
+.facebook-login,
+.password-reset {
   text-decoration: none;
   margin-bottom: 3%;
-    display: inline-block;
-    color: slateblue;
+  display: inline-block;
+  color: slateblue;
 }
 
 .password-reset {
@@ -103,16 +99,16 @@ body {
   color: darkblue;
 }
 
-.sign-up{
+.sign-up {
   border: 1px solid #eee;
-    background-color: #fff;
-    height: 60px;
-    width: 70%;
-    margin-top: 2%;
-    color: #000;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  background-color: #fff;
+  height: 60px;
+  width: 70%;
+  margin-top: 2%;
+  color: #000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .sign-up a {
@@ -123,20 +119,21 @@ body {
   width: 25%;
 }
 
-.get-the-app{
+.get-the-app {
   width: 70%;
   margin-top: 2%;
   text-align: center;
   padding: 5px;
 }
 
-.badge{
+.badge {
   height: 25px;
   width: 70%;
   margin-top: 2%;
 }
 
-.img2 , .img3{
+.img2,
+.img3 {
   display: inline-block;
   width: 50%;
   height: 40px;

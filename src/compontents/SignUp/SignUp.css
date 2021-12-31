@@ -10,12 +10,12 @@ body {
   font-family: serif;
 }
 
-.form_data2{
+.form_data2 {
   width: 100%;
   text-align: center;
   background-color: #fff;
   margin-top: 3%;
-  height:530px;
+  height: 530px;
   border: 1px solid #eee;
   padding: 10px;
 }
@@ -25,36 +25,33 @@ body {
   font-weight: bold;
 }
 
-
-.img1{
+.img1 {
   display: inline-block;
   height: 51px;
   width: 50%;
   margin: 2% 0px 2% 0px;
 }
 
-.form_data2 form input
-{
+.form_data2 form input {
   width: 90%;
   height: 30px;
   margin-bottom: 6%;
   padding-left: 2%;
 }
 
-.form_data2 form .form-btn{
+.form_data2 form .form-btn {
   width: 90%;
   height: 30px;
   background-color: #3897f0;
   color: #fff;
   font-weight: bold;
   border: none;
-  border-radius:5px;
+  border-radius: 5px;
   cursor: pointer;
   margin-bottom: 6%;
 }
 
-
-.orclass{
+.orclass {
   width: 100%;
   height: 25px;
   display: flex;
@@ -67,28 +64,26 @@ body {
   color: #999999;
   text-transform: uppercase;
   width: 50%;
-    display: inline-block;
-    font-weight: bold;
+  display: inline-block;
+  font-weight: bold;
 }
 
-.orclass hr{
+.orclass hr {
   width: 100%;
   margin: 0px 4%;
 }
-
 
 .form-btn a {
   color: #fff;
   text-decoration: none;
 }
 
-.para{
+.para {
   font-size: 12px;
   font-weight: normal;
 }
 
-
-.log_in{
+.log_in {
   border: 1px solid #eee;
   background-color: #fff;
   height: 60px;
@@ -100,27 +95,28 @@ body {
   align-items: center;
 }
 
-.log_in a{
+.log_in a {
   text-decoration: none;
   font-weight: bold;
   color: #00c9ff;
   width: 20%;
 }
 
-.get-the-app2{
+.get-the-app2 {
   width: 100%;
   margin-top: 2%;
   text-align: center;
   padding: 5px;
 }
 
-.badge{
+.badge {
   height: 25px;
   width: 100%;
   margin-top: 2%;
 }
 
-.img2 , .img3{
+.img2,
+.img3 {
   display: inline-block;
   width: 40%;
   height: 40px;
