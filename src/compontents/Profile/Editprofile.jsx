@@ -65,6 +65,7 @@ const Editprofile = () => {
     });
   }, []);
 
+  
   function UpdateProfile() {
     axios({
       method: "PUT",
@@ -76,21 +77,22 @@ const Editprofile = () => {
       console.log();
     });
   }
-
+  
   useEffect(() => {
     appp();
   }, []);
-
+  
   const appp = async () => {
     const { data } = await axios.get(
       `http://127.0.0.1:8000/instgram/profile/${ID}`
-    );
-    console.log(data);
-    setCount(data);
-  };
-
-  return (
-    <>
+      );
+      console.log(data);
+      setCount(data);
+    };
+    
+  
+    return (
+      <>
       <Container fluid>
         <Row>
           <Header />
@@ -99,7 +101,7 @@ const Editprofile = () => {
           <Col xs={2}></Col>
           <Col xs={8}>
             <div className="my_data_edit">
-              <div className="left_div">
+              {/* <div className="left_div">
                 <div className="sub_data">
                   <label htmlFor="profile_pic">Update Your Photo</label>
                   <input
@@ -130,7 +132,7 @@ const Editprofile = () => {
                     onClick={UpdateProfile}
                   />
                 </Link>
-              </div>
+              </div> */}
               <form action="" className="myform">
                 <div className="sub_data">
                   <label htmlFor="first_name">First Name</label>

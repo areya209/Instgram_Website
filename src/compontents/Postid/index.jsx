@@ -147,6 +147,7 @@ function Postid() {
     formField.append("username", user.username);
     formField.append("profile", Profile);
 
+   try {
     await axios({
       method: "post",
       url: "http://127.0.0.1:8000/instgram/like/",
@@ -157,6 +158,11 @@ function Postid() {
     });
     console.log(postid.username)
     console.log(user.username)
+    // 
+   } catch (error) {
+     
+   }
+   
   };
 
   const IDlike = async () => {

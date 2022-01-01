@@ -50,6 +50,8 @@ const Profile = (props) => {
   const [following, setfollowing] = useState([]);
   const [follower, setfollowers] = useState([]);
   const [isFollowed, setIsFollowed] = useState(false);
+  const idProfile = (profilee.bio)
+
 
   const [followers, serfollower] = useState([]);
   const user_from = user.user_id;
@@ -149,25 +151,22 @@ const Profile = (props) => {
 
     console.log("add new follow");
 
-    await axios({
+   return await axios({
       method: "post",
       url: "http://localhost:8000/instgram/follow/",
       data: formField,
     });
+  
   };
 
-  // Button UnFollow
-  // const [toggle, setToggle] = useState("addNewfollow");
 
   const delfollowers = async () => {
-    await axios.delete(`http://127.0.0.1:8000/instgram/delfollowers/`, {
+    
+   return await axios.delete(`http://127.0.0.1:8000/instgram/delfollowers/`, {
       data: { user_from: user.user_id, user_to: posts?.id },
     });
   };
 
-  //   const triggerToggle = () => {
-  //    toggle === addNewfollow ? setToggle(delfollowers) : setToggle(addNewfollow);
-  // };
 
   // Model Of Following
   const classes = useStyles();
@@ -190,7 +189,7 @@ const Profile = (props) => {
     setOpen2(false);
   };
 
-  //  console.log("Hellllo" , user_to)
+
 
   // set default value of follow on laod
   const setDefaultFollow = (id) => {
@@ -198,7 +197,7 @@ const Profile = (props) => {
     if (arr?.find((element) => element == id)) {
       setIsFollowed(true);
     }
-    console.log("MMMMM", id);
+    console.log("setDefaultFollow: ", id);
   };
 
   const setMyFollowing = () => {
@@ -227,6 +226,8 @@ const Profile = (props) => {
       delfollowers().then((response) => {
         console.log(follower);
         console.log(response);
+        navigate('/home')
+
       });
       setIsFollowed(false);
       setMyFollowing();
@@ -251,6 +252,7 @@ const Profile = (props) => {
           newFollowers.push(user);
           setfollowers(newFollowers);
           console.log(follower);
+          navigate('/home')
         },
         (error) => {
           console.log("error", error);
@@ -259,6 +261,7 @@ const Profile = (props) => {
       // btn.innerText = "UnFollow";
     }
   };
+
 
   return (
     <>

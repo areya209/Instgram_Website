@@ -162,7 +162,7 @@ function Loginfacebook() {
             <Col xs={3}>
               <div className="my_photo">
                 <Avatar
-                  className="myimage"
+                  className="myimage my_photo_facebook"
                   src={picture}
                   alt="logo"
                   size="giant"

@@ -19,7 +19,7 @@ function Post(props) {
   const [image_name, setName] = useState(null);
   const [profile, setPhone] = useState(user.user_id);
 
-  const addNewStudent = async () => {
+  const addNewPost2 = async () => {
     let formField = new FormData();
     formField.append("image_name", image_name);
     formField.append("profile", profile);
@@ -54,7 +54,7 @@ function Post(props) {
     const { data } = await axios.get(
       `http://127.0.0.1:8000/instgram/viewfollowers/${myuser}`
     );
-    console.log(data);
+    console.log('Posts' , data);
     setpost(data);
   };
 
@@ -129,20 +129,26 @@ function Post(props) {
   const [postid, setpostid] = useState([]);
   const { id } = useParams();
 
-  const addNewlike = async () => {
+  const addNewlike = async (postid) => {
     let formField = new FormData();
     formField.append("user_like", user.user_id);
-    formField.append("post_like", postid.id);
+    formField.append("post_like", postid);
     formField.append("username", user.username);
 
-    await axios({
-      method: "post",
-      url: "http://127.0.0.1:8000/instgram/like/",
-      data: formField,
-    }).then((response) => {
-      console.log(response.data);
-    });
-    navigate("/home");
+    try {
+      await axios({
+        method: "post",
+        url: "http://127.0.0.1:8000/instgram/like/",
+        data: formField,
+      }).then((response) => {
+        console.log(response.data);
+      });
+      navigate("/home");
+    } catch (error) {
+      
+    }
+
+  
   };
 
   const IDlike = async () => {
@@ -153,6 +159,8 @@ function Post(props) {
     console.log(data);
     setlike(data);
   };
+
+
 
   return (
     <>
@@ -174,12 +182,14 @@ function Post(props) {
                 />
 
                 <div className="post_like">
+          
                   <Link to={`/postid/${puser.id}`}>
                     <FontAwesomeIcon
                       icon={faHeart}
                       size="lg"
                       style={{ color: "red" }}
                       className="icons2"
+                      onClick={() => addNewlike(puser.id) }
                     />
                   </Link>
 
@@ -191,6 +201,8 @@ function Post(props) {
                       className="icons_comment"
                     />
                   </Link>
+
+                
                 </div>
                 <h5 className="post_text"> {puser.image_caption}</h5>
                 <span className="p-2">

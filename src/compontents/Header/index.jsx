@@ -138,6 +138,28 @@ const Header = () => {
     settext();
   };
 
+
+  // Notification 
+  const [Follow, setFollow] = useState([]);
+    
+ useEffect(() => {
+      const interval = setInterval(() => {
+        IdFollow()
+        
+        
+      }, 10000);
+      return () => clearInterval(interval);
+    }, []);
+
+    const IdFollow = async() =>{
+      const {data} =  await axios.get(`http://127.0.0.1:8000/instgram/getfollower/${user.user_id}`)
+    
+      console.log("datanew",data)
+      setFollow(data)
+     
+
+    }
+
   return (
     <>
       <Container fluid>

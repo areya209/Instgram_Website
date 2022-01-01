@@ -23,7 +23,7 @@ const Imges = (props) => {
 
   useEffect(() => {
     IDprofile();
-  }, []);
+  }, [props.id_image]);
 
   return (
     <div>
